@@ -3,3 +3,4 @@
  */
 
 export * from './lib/shared-ui.module';
+export * from './lib/document-overview/document-overview.component';

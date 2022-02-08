@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {IonicModule} from '@ionic/angular';
 import {AppRoutingModule} from './app-router.module';
 import {SharedUiModule} from 'shared-ui';
+import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -13,7 +15,9 @@ import {SharedUiModule} from 'shared-ui';
     imports: [
         BrowserModule,
         IonicModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

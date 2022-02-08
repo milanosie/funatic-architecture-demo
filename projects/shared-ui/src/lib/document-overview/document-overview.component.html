@@ -1,5 +1,5 @@
-<div style="display: flex;">
-    <div class="card" *ngFor="documents | async as document">
+<div style="display: flex; flex-wrap: wrap; flex-grow: 2" *ngIf="documents$ | async as documents">
+    <div class="card" *ngFor="let document of documents">
         <div class="container">
             <h4><b>{{document.title}}</b></h4>
             <h4><i>{{document.createdAt}}</i></h4>

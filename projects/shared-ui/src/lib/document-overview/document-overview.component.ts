@@ -10,11 +10,11 @@ import {DocumentService} from 'core';
 export class DocumentOverviewComponent implements OnInit {
 
   @Input() reloadDocuments: Observable<boolean> = new Observable<boolean>();
-  public documents: Observable<any>;
+  public documents$: Observable<any>;
   constructor(private documentService: DocumentService) { }
 
   ngOnInit(): void {
-    this.reloadDocuments.subscribe(() => this.documents = this.documentService.getDocuments());
+    this.reloadDocuments.subscribe(() => this.documents$ = this.documentService.getDocuments());
   }
 
 }
