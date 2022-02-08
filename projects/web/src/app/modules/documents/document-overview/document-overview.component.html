@@ -1,0 +1,3 @@
+<h1 style="margin: 20px;">Welkom op de web versie van documenten</h1>
+<button mat-raised-button color="primary" style="margin: 20px; " (click)="doRefresh()">Refresh documenten</button>
+<lib-document-overview [reloadDocuments]="refreshSubject.asObservable()"></lib-document-overview>

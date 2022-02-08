@@ -218,6 +218,7 @@
               "projects/web/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "projects/web/src/styles.scss"
             ],
             "scripts": []
@@ -282,6 +283,7 @@
               "projects/web/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "projects/web/src/styles.scss"
             ],
             "scripts": []

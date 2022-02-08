@@ -1,0 +1,12 @@
+<ion-content>
+    <ion-text color="primary">
+        <h1 style="margin-left: 1rem; margin-top: 1rem">Berichten overzicht</h1>
+    </ion-text>
+    <!-- Default Searchbar -->
+    <ion-searchbar (ionChange)="filterMessage($event)"></ion-searchbar>
+    <ion-item button *ngFor="let message of filteredMessages" (click)="openMessage(message.id)">
+        <ion-label>
+            {{message.title}}
+        </ion-label>
+    </ion-item>
+</ion-content>

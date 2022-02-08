@@ -10,6 +10,10 @@ const routes: Routes = [
         path: 'documenten',
         loadChildren: () => import('./pages/documents/documents.module').then(m => m.DocumentsModule)
     },
+    {
+        path: 'berichten',
+        loadChildren: () => import('./pages/messages/messages.module').then(m => m.MessagesModule)
+    },
 ];
 
 @NgModule({
