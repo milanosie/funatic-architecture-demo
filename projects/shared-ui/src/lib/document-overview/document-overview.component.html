@@ -1,0 +1,9 @@
+<div style="display: flex;">
+    <div class="card" *ngFor="documents | async as document">
+        <div class="container">
+            <h4><b>{{document.title}}</b></h4>
+            <h4><i>{{document.createdAt}}</i></h4>
+            <p>{{document.message}}</p>
+        </div>
+    </div>
+</div>
