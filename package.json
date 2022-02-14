@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "watch-core": "ng build core --watch",
+    "watch-ui": "ng build shared-ui --watch",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

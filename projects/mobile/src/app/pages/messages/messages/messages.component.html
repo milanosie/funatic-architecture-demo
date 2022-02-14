@@ -3,10 +3,24 @@
         <h1 style="margin-left: 1rem; margin-top: 1rem">Berichten overzicht</h1>
     </ion-text>
     <!-- Default Searchbar -->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+                pullingIcon="chevron-down-circle-outline"
+                pullingText="Pull to refresh"
+                refreshingSpinner="circles"
+                refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
     <ion-searchbar (ionChange)="filterMessage($event)"></ion-searchbar>
     <ion-item button *ngFor="let message of filteredMessages" (click)="openMessage(message.id)">
         <ion-label>
             {{message.title}}
         </ion-label>
     </ion-item>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
+        <ion-infinite-scroll-content
+                loadingSpinner="bubbles"
+                loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
